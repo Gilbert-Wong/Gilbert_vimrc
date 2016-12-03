@@ -1,0 +1,1 @@
+/home/gilbert/.vimrc
