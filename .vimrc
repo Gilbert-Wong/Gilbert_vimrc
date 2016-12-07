@@ -99,8 +99,10 @@ nmap <Leader>Q :qa!<CR>
 "定义快捷键在结对符之间跳转
 nmap <Leader>M %
 "定义Buffer切换键
-nmap <Leader>bn :bn<CR>
-nmap <Leader>bp :bp<CR>
+"nmap <Leader>bn :bn<CR>
+map <C-Tab> :bn<CR>
+"nmap <Leader>bp :bp<CR>
+map <C-S-Tab> :bp<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 "开启实时搜索功能
