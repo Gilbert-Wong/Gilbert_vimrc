@@ -340,8 +340,6 @@ let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 " 开启 YCM 标签补全引擎
 let g:ycm_collect_identifiers_from_tags_files=1
-" 引入 C++ 标准库tags
-set tags+=/data/misc/software/misc./vim/stdcpp.tags
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
 inoremap <leader>; <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
@@ -359,3 +357,5 @@ let g:ycm_server_python_interpreter='/usr/bin/python'
 " 引入 C++ 标准库tags
 set tags+=/usr/include/c++/5/stdcpp.tags
 set tags+=/usr/include/sys.tags
+”YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
