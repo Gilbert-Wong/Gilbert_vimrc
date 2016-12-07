@@ -103,6 +103,7 @@ nmap <Leader>M %
 map <C-Tab> :bn<CR>
 "nmap <Leader>bp :bp<CR>
 map <C-S-Tab> :bp<CR>
+nmap <Leader>d :bdelete<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 "开启实时搜索功能
@@ -119,6 +120,7 @@ set wildmenu
 syntax enable
 set background=light
 "set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 "colorscheme molokai
 "设置状态栏主题风格
