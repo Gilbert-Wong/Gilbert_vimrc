@@ -37,7 +37,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "Themes
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
-Plug 'Lokaltog/powerline',{ 'rtp': 'powerline/bindings/vim/'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
@@ -67,6 +68,9 @@ Plug 'vim-scripts/DrawIt'
 
 "vim debug tool
 Plug 'gilligan/vim-lldb'
+
+"vim fcitx
+Plug 'lilydjwg/fcitx.vim'
 call plug#end()
 
 
@@ -94,6 +98,9 @@ nmap <Leader>WQ :wa<CR>:q<CR>
 nmap <Leader>Q :qa!<CR>
 "定义快捷键在结对符之间跳转
 nmap <Leader>M %
+"定义Buffer切换键
+nmap <Leader>bn :bn<CR>
+nmap <Leader>bp :bp<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 "开启实时搜索功能
@@ -114,16 +121,11 @@ colorscheme solarized
 "colorscheme molokai
 "设置状态栏主题风格
 set laststatus=2
-"let g:Powerline_colorscheme='solarized256'
-"let g:syntastic_python_flake8_args = '--ignore=W191,E501,E128,W291,E126,E101'
-"let b:syntastic_checkers = ['flake8']
-"unlet! g:python_space_error_highlight
-"let g:pymode_syntax_indent_errors = 0
-"let g:pymode_syntax_space_errors = 0
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-let Powerline_symbols='compatible'
-
+let g:airline_section_b = '%{strftime("%c")}'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " 设置 gvim 显示字体
 set guifont=YaHei\ Consolas\ Hybrid\ 11.5
@@ -132,7 +134,7 @@ set encoding=utf8
 set langmenu=zh_CN.utf-8
 
 " 禁止折行
-set nowrap
+"set nowrap
 
 "禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -269,6 +271,8 @@ nmap <silent> <Leader>sw :FSHere<cr>
 let tagbar_right=1
 "设置显示/隐藏标签列表子窗口的快捷键。速记:identifier list by tag
 nnoremap <Leader>ilt :TagbarToggle<CR>
+"set show/hide filelist shortcut
+nmap <Leader>fl :NERDTreeToggle<CR>
 "设置标签子窗口的宽度
 let tagbar_width=32
 " tagbar 子窗口中不显示冗余帮助信息 
