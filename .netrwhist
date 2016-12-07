@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/gilbert/MEGA'
-let g:netrw_dirhist_2='/home/gilbert/Documents/workplace/test'
-let g:netrw_dirhist_3='/home/gilbert/MEGA/junior/softwaredesign/xml editor/xmleditor'
