@@ -359,5 +359,3 @@ let g:ycm_server_python_interpreter='/usr/bin/python'
 " 引入 C++ 标准库tags
 set tags+=/usr/include/c++/5/stdcpp.tags
 set tags+=/usr/include/sys.tags
-
-
