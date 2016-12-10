@@ -45,6 +45,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 "接口与实现快速切换
 Plug 'derekwyatt/vim-fswitch'
+Plug 'derekwyatt/vim-protodef'
 
 "显示书签
 Plug 'kshenoy/vim-signature'
@@ -71,6 +72,9 @@ Plug 'gilligan/vim-lldb'
 
 "vim fcitx
 Plug 'lilydjwg/fcitx.vim'
+
+"快速开关注释
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 
@@ -204,7 +208,7 @@ set ruler
 set cmdheight=1
 
 "侦测文件类型
-filetype on
+filetype off
 
 "自适应不同语言的智能缩进
 filetype indent on
@@ -324,6 +328,18 @@ nmap <Leader>tp :tprevious<CR>
 " 默认 --c++-kinds=+p+l，重新设置为 --c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v
 " 默认 --fields=+iaS 不满足 YCM 要求，需改为 --fields=+iaSl
 let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
+
+"设置pullproto.pl脚本路径
+let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
+"成员函数的实现顺序与声明顺序一致
+let g:disable_protodef_sorting
+
+"ultisnips设置
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
+"Ultisnips keys
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
+let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 
 "ycm配置
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
