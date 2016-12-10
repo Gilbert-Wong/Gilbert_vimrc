@@ -138,7 +138,8 @@ set encoding=utf8
 set langmenu=zh_CN.utf-8
 
 " 禁止折行
-"set nowrap
+set nowrap
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -236,8 +237,7 @@ set smartindent
 set foldmethod=syntax
 "nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 "启动vim时关闭折叠代码
-"set nofoldenable
-
+set nofoldenable
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "去掉输入错误的提示声音
@@ -357,5 +357,5 @@ let g:ycm_server_python_interpreter='/usr/bin/python'
 " 引入 C++ 标准库tags
 set tags+=/usr/include/c++/5/stdcpp.tags
 set tags+=/usr/include/sys.tags
-”YouCompleteMe
+" YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
