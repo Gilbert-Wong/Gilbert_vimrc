@@ -103,11 +103,28 @@ nmap <Leader>Q :qa!<CR>
 "定义快捷键在结对符之间跳转
 nmap <Leader>M %
 "定义Buffer切换键
-"nmap <Leader>bn :bn<CR>
-map <C-Tab> :bn<CR>
-"nmap <Leader>bp :bp<CR>
-map <C-S-Tab> :bp<CR>
+nmap <Leader>bn :bn<CR>
+nmap <Leader>bp :bp<CR>
 nmap <Leader>d :bdelete<CR>
+"定义tab快捷切换
+"noremap <silent><tab>m :tabnew<cr>
+"noremap <silent><tab>e :tabclose<cr>
+"noremap <silent><tab>n :tabn<cr>
+"noremap <silent><tab>p :tabp<cr>
+noremap <silent><leader>t :tabnew<cr>
+noremap <silent><leader>g :tabclose<cr>
+noremap <silent><leader>1 :tabn 1<cr>
+noremap <silent><leader>2 :tabn 2<cr>
+noremap <silent><leader>3 :tabn 3<cr>
+noremap <silent><leader>4 :tabn 4<cr>
+noremap <silent><leader>5 :tabn 5<cr>
+noremap <silent><leader>6 :tabn 6<cr>
+noremap <silent><leader>7 :tabn 7<cr>
+noremap <silent><leader>8 :tabn 8<cr>
+noremap <silent><leader>9 :tabn 9<cr>
+noremap <silent><leader>0 :tabn 10<cr>
+noremap <silent><s-tab> :tabnext<CR>
+inoremap <silent><s-tab> <ESC>:tabnext<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 "开启实时搜索功能
@@ -131,9 +148,9 @@ colorscheme solarized
 set laststatus=2
 let g:airline_section_b = '%{strftime("%c")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " 设置 gvim 显示字体
 set guifont=YaHei\ Consolas\ Hybrid\ 11.5
@@ -329,10 +346,10 @@ nmap <Leader>tp :tprevious<CR>
 " 默认 --fields=+iaS 不满足 YCM 要求，需改为 --fields=+iaSl
 let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
-"设置pullproto.pl脚本路径
-let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 "成员函数的实现顺序与声明顺序一致
 let g:disable_protodef_sorting=1
+"设置pullproto.pl脚本路径
+let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 
 "ultisnips设置
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
