@@ -332,7 +332,7 @@ let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v 
 "设置pullproto.pl脚本路径
 let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 "成员函数的实现顺序与声明顺序一致
-let g:disable_protodef_sorting
+let g:disable_protodef_sorting=1
 
 "ultisnips设置
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
