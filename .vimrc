@@ -285,8 +285,11 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 "autocmd VimEnter * call ToggleFullscreen()
 
 """""""""""Plug configuration""""""""""""""""""'
+
 "ctrlspace settings
 set hidden
+map <Leader>b <C-Space>
+"inoremap <Leader>c <C-Space>
 
 "Indent Guides Plug configuration
 "随vim自启动
