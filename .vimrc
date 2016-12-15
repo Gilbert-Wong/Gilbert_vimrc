@@ -75,6 +75,9 @@ Plug 'lilydjwg/fcitx.vim'
 
 "快速开关注释
 Plug 'scrooloose/nerdcommenter'
+
+"ctrl space
+Plug 'vim-ctrlspace/vim-ctrlspace'
 call plug#end()
 
 
@@ -146,14 +149,18 @@ colorscheme solarized
 "colorscheme molokai
 "设置状态栏主题风格
 set laststatus=2
-let g:airline_section_b = '%{strftime("%c")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+set linespace=0
+let g:airline_powerline_fonts=1
+"let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline_theme='light'
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " 设置 gvim 显示字体
-set guifont=YaHei\ Consolas\ Hybrid\ 11.5
+"set guifont=YaHei\ Consolas\ Hybrid\ 11.5
+set guifont=Source\ Code\ Pro\ Regular\ 12
 "设置字符编码
 set encoding=utf8
 set langmenu=zh_CN.utf-8
@@ -278,6 +285,8 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 "autocmd VimEnter * call ToggleFullscreen()
 
 """""""""""Plug configuration""""""""""""""""""'
+"ctrlspace settings
+set hidden
 
 "Indent Guides Plug configuration
 "随vim自启动
@@ -293,6 +302,7 @@ let g:indent_guides_guide_size=1
 nmap <silent> <Leader>sw :FSHere<cr>
 
 "tagbar设置
+"
 let tagbar_right=1
 "设置显示/隐藏标签列表子窗口的快捷键。速记:identifier list by tag
 nnoremap <Leader>ilt :TagbarToggle<CR>
