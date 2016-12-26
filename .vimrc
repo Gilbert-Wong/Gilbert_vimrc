@@ -302,7 +302,7 @@ let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is c
 
 "ctrlspace settings
 set hidden
-map <Leader>b <C-Space>
+map <Leader><space> <C-Space>
 "inoremap <Leader>c <C-Space>
 
 "Indent Guides Plug configuration
