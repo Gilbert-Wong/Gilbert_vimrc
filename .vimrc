@@ -281,15 +281,24 @@ set confirm
 
 "functions
 " 将外部命令 wmctrl 控制窗口最大化的命令行参数封装成一个 vim 的函数
-fun! ToggleFullscreen()
+function! ToggleFullscreen()
     call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
-endf
+endfunction
 " 全屏开/关快捷键
 map <silent> <F11> :call ToggleFullscreen()<CR>
 " 启动 vim 时自动全屏
 "autocmd VimEnter * call ToggleFullscreen()
 
 """""""""""Plug configuration""""""""""""""""""'
+
+"ConqueueGDB settings
+map <Leader>r :run
+map <Leader>c :continue
+map <Leader>s :step
+map <Leader>pv :print variable under cursor
+let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
+let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
+let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
 
 "ctrlspace settings
 set hidden
