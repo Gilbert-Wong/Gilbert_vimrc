@@ -68,7 +68,8 @@ Plug 'suan/vim-instant-markdown'
 Plug 'vim-scripts/DrawIt'
 
 "vim debug tool
-Plug 'gilligan/vim-lldb'
+"Plug 'gilligan/vim-lldb'
+Plug 'vim-scripts/Conque-GDB'
 
 "vim fcitx
 Plug 'lilydjwg/fcitx.vim'
@@ -78,6 +79,10 @@ Plug 'scrooloose/nerdcommenter'
 
 "ctrl space
 Plug 'vim-ctrlspace/vim-ctrlspace'
+
+"括号匹配
+Plug 'Raimondi/delimitMate'
+
 call plug#end()
 
 
@@ -399,7 +404,7 @@ let g:ycm_seed_identifiers_with_syntax=1
 " 开启 YCM 标签引擎
 let g:ycm_collect_identifiers_from_tags_files=1
 "loaded in python2
-let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_server_python_interpreter='/usr/bin/python2'
 " 引入 C++ 标准库tags
 set tags+=/usr/include/c++/5/stdcpp.tags
 set tags+=/usr/include/sys.tags
