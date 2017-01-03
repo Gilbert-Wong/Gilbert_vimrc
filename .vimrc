@@ -99,7 +99,7 @@ nmap LE $
 "设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
 "设置快捷键将选中文本快复制至系统剪贴板
-nmap <Leader>p "+p
+nmap <Leader>pp "+p
 "定义快捷键关闭当前分割窗口
 nmap <Leader>q :q<CR>
 "定义快捷键保存所有窗口内容
@@ -389,6 +389,7 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 " 只能是 #include 或已打开的文件
 nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
 " YCM 补全菜单配色
 " 菜单
 highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
@@ -415,7 +416,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 "loaded in python2
 let g:ycm_server_python_interpreter='/usr/bin/python2'
 " 引入 C++ 标准库tags
-set tags+=/usr/include/c++/5/stdcpp.tags
-set tags+=/usr/include/sys.tags
+"set tags+=/usr/include/c++/5/stdcpp.tags
+"set tags+=/usr/include/sys.tags
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
