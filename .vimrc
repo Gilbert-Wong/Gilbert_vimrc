@@ -83,8 +83,12 @@ Plug 'vim-ctrlspace/vim-ctrlspace'
 "括号匹配
 Plug 'Raimondi/delimitMate'
 
-call plug#end()
+"vimshell
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimshell.vim'
+Plug 'vim-scripts/Conque-Shell'
 
+call plug#end()
 
 "让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
@@ -317,6 +321,9 @@ let g:indent_guides_guide_size=1
 
 "*.cpp和*.h间切换
 nmap <silent> <Leader>sw :FSHere<cr>
+
+"Conqueshell settings
+map <silent> <F2> :ConqueTermSplit bash<CR>
 
 "tagbar设置
 "
