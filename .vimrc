@@ -151,8 +151,8 @@ set wildmenu
 """""""""""'外观设定"""""""""""""""""""""'
 "配色方案
 syntax enable
-set background=light
-"set background=dark
+"set background=light
+set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 "colorscheme molokai
@@ -169,7 +169,7 @@ let g:airline_theme='light'
 
 " 设置 gvim 显示字体
 "set guifont=YaHei\ Consolas\ Hybrid\ 11.5
-set guifont=Source\ Code\ Pro\ Regular\ 12
+set guifont=Source\ Code\ Pro\ Regular\ 13
 "设置字符编码
 set encoding=utf8
 set langmenu=zh_CN.utf-8
@@ -294,6 +294,10 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 "autocmd VimEnter * call ToggleFullscreen()
 
 """""""""""Plug configuration""""""""""""""""""'
+
+"vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 "ConqueueGDB settings
 map <Leader>r :run
@@ -429,3 +433,32 @@ let g:ycm_server_python_interpreter='/usr/bin/python2'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++'
+
+
+
+
+"一键编译
+" <F5>编译和运行Cmap <F5> :call CompileRunGcc()<CR>  
+map <F5> :call CompileRunGcc()<CR>  
+func! CompileRunGcc()  
+    exec "w"  
+    if &filetype == 'c'  
+        exec "!g++ % -o %<"  
+        exec "! %<"  
+    elseif &filetype == 'cpp'  
+        exec "!g++ % -o %<"  
+        exec "! %<"  
+    elseif &filetype == 'java'   
+        exec "!javac %"   
+        exec "!java %<"  
+    elseif &filetype == 'sh'  
+        :!%  
+    endif  
+endfunc  
+"C,C++µÄµ÷ÊÔ  
+map <F8> :call Rungdb()<CR>  
+func! Rungdb()  
+    exec "w"  
+    exec "!g++ % -g -o %<"  
+    exec "!gdb %<"  
+endfunc
