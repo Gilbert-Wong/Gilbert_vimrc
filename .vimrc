@@ -443,10 +443,10 @@ map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()  
     exec "w"  
     if &filetype == 'c'  
-        exec "!g++ % -o %<"  
+        exec "!g++ % -g -o %<"  
         exec "! %<"  
     elseif &filetype == 'cpp'  
-        exec "!g++ % -o %<"  
+        exec "!g++ % -g -o %<"  
         exec "! %<"  
     elseif &filetype == 'java'   
         exec "!javac %"   
