@@ -1,0 +1,13 @@
+#! /usr/bin/python
+import sys,os
+
+VIM_FILEDIR=os.environ.get('VIM_FILEDIR','')
+VIM_FILENAME=os.environ.get('VIM_FILENOEXT','')
+
+cmd = "cd \"%s\"; %s/%s; read -n1 -rsp press\ any\ key\ to\ continue\ ..."
+cmd = cmd%(VIM_FILEDIR, VIM_FILEDIR, VIM_FILENAME)
+cmd = cmd.replace('\\', '\\\\').replace('"', "\\\"").replace("'", "\\\'")
+cmd = 'bash -c \"%s\"'%cmd
+ 
+cmdline = 'gnome-terminal --command=\'%s\''%cmd
+os.system(cmdline)

@@ -88,6 +88,9 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
 Plug 'vim-scripts/Conque-Shell'
 
+"vimmake
+Plug 'skywind3000/vimmake'
+
 call plug#end()
 
 "让配置变更立即生效
@@ -151,8 +154,8 @@ set wildmenu
 """""""""""'外观设定"""""""""""""""""""""'
 "配色方案
 syntax enable
-"set background=light
-set background=dark
+set background=light
+"set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 "colorscheme molokai
@@ -439,26 +442,12 @@ let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++'
 
 "一键编译
 " <F5>编译和运行Cmap <F5> :call CompileRunGcc()<CR>  
-map <F5> :call CompileRunGcc()<CR>  
-func! CompileRunGcc()  
-    exec "w"  
-    if &filetype == 'c'  
-        exec "!g++ % -g -o %<"  
-        exec "! %<"  
-    elseif &filetype == 'cpp'  
-        exec "!g++ % -g -o %<"  
-        exec "! %<"  
-    elseif &filetype == 'java'   
-        exec "!javac %"   
-        exec "!java %<"  
-    elseif &filetype == 'sh'  
-        :!%  
-    endif  
-endfunc  
-"C,C++µÄµ÷ÊÔ  
-map <F8> :call Rungdb()<CR>  
-func! Rungdb()  
-    exec "w"  
-    exec "!g++ % -g -o %<"  
-    exec "!gdb %<"  
-endfunc
+let g:vimmake_path='~/.vim/vimmake_config'
+let g:vimmake_mode={'gcc':'async','run':'normal'}
+
+noremap <F6> :VimTool runnewwindow<CR>
+noremap <F7> :VimTool g++<CR>
+noremap <F5> :VimTool run<CR>
+inoremap <F7> <ESC>:VimTool g++<CR> 
+inoremap <F5> <ESC>:VimTool run<CR> 
+inoremap <F6> <ESC>:VimTool runnewwindow<CR> 
