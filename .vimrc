@@ -445,8 +445,11 @@ let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++'
 "一键编译
 " <F5>编译和运行Cmap <F5> :call CompileRunGcc()<CR>  
 let g:vimmake_path='~/.vim/vimmake_config'
-let g:vimmake_mode={'gcc':'async','run':'normal'}
-
+"let g:vimmake_mode = { 'gcc':'quickfix', 'run':'normal' }
+let g:vimmake_mode = {}
+let g:vimmake_mode['g++'] = 'async'
+let g:vimmake_mode['run'] = 'normal'
+noremap <silent><F10> :call vimmake#toggle_quickfix(6)<CR>
 noremap <F6> :VimTool runnewwindow<CR>
 noremap <F7> :VimTool g++<CR>
 noremap <F5> :VimTool run<CR>
