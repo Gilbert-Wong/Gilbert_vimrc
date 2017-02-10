@@ -91,6 +91,8 @@ Plug 'vim-scripts/Conque-Shell'
 "vimmake
 Plug 'skywind3000/vimmake'
 
+Plug 'kien/ctrlp.vim'
+
 call plug#end()
 
 "让配置变更立即生效
