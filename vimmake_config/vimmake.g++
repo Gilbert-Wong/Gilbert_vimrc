@@ -1,2 +1,2 @@
 #! /bin/sh
-g++ "$VIM_FILEPATH" -g -o "$VIM_FILEDIR/$VIM_FILENOEXT"
+g++ "$VIM_FILEPATH" -g -std=c++11 -o "$VIM_FILEDIR/$VIM_FILENOEXT"
