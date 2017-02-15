@@ -97,6 +97,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'python-mode/python-mode'
 call plug#end()
 
+"关闭兼容模式
+set nocompatible
 "让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
@@ -150,8 +152,6 @@ inoremap <silent><s-tab> <ESC>:tabnext<CR>
 set incsearch
 "搜索忽略大小写
 set ignorecase
-"关闭兼容模式
-set nocompatible
 "vim 自身命令行模式智能补全
 set wildmenu
 
@@ -200,8 +200,6 @@ set guioptions-=R
 set guioptions-=m
 set guioptions-=T
 
-"语法高亮
-set syntax=on
 
 """"""""""""""""""""""""""""""""""""""""""""
 
@@ -251,14 +249,18 @@ set ruler
 "命令行的高度
 set cmdheight=1
 
-"侦测文件类型
-filetype off
 
 "自适应不同语言的智能缩进
 filetype indent on
 
 "载入文件类型插件
 filetype plugin on
+
+"侦测文件类型
+filetype on
+
+"语法高亮
+set syntax=on
 
 "可以在buffer的任何地方使用鼠标
 set mouse=a
