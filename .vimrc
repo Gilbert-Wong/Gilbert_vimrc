@@ -94,6 +94,7 @@ Plug 'skywind3000/vimmake'
 
 Plug 'kien/ctrlp.vim'
 
+Plug 'python-mode/python-mode'
 call plug#end()
 
 "让配置变更立即生效
@@ -440,10 +441,13 @@ let g:ycm_server_python_interpreter='/usr/bin/python2'
 "set tags+=/usr/include/c++/5/stdcpp.tags
 "set tags+=/usr/include/sys.tags
 " YouCompleteMe
+let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++'
 
+"pythonmode
+let g:pymode_python = 'python3'
 
 
 
