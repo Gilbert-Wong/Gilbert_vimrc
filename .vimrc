@@ -35,6 +35,7 @@ Plug '~/my-prototype-plugin'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 "Themes
+Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
@@ -156,10 +157,14 @@ set wildmenu
 """""""""""'外观设定"""""""""""""""""""""'
 "配色方案
 syntax enable
-set background=light
-"set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+if has('gui_running')
+    set background=light
+    "set background=dark
+    colorscheme solarized
+else
+    colorscheme zenburn
+endif
+"let g:solarized_termcolors=256
 "colorscheme molokai
 "设置状态栏主题风格
 set laststatus=2
