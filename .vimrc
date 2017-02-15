@@ -413,9 +413,9 @@ nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
 " YCM 补全菜单配色
 " 菜单
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+highlight Pmenu ctermfg=249 ctermbg=0 guifg=#005f87 guibg=#EEE8D5
 " 选中项
-highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+highlight PmenuSel ctermfg=7 ctermbg=232 guifg=#AFD700 guibg=#106900
 " 补全功能在注释中同样有效
 let g:ycm_complete_in_comments=1
 " 允许 vim 加载 .ycm_extra_conf.py 文件，不再提示
@@ -456,7 +456,7 @@ let g:vimmake_mode['g++'] = 'async'
 let g:vimmake_mode['run'] = 'normal'
 noremap <silent><F10> :call vimmake#toggle_quickfix(6)<CR>
 noremap <F6> :VimTool runnewwindow<CR>
-noremap <F7> :VimTool g++<CR>
+noremap <F10><F7> :VimTool g++<CR>
 noremap <F5> :VimTool run<CR>
 inoremap <F7> <ESC>:VimTool g++<CR> 
 inoremap <F5> <ESC>:VimTool run<CR> 
