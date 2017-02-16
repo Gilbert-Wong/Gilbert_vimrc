@@ -161,6 +161,8 @@ Plug 'skywind3000/vimmake'
 Plug 'kien/ctrlp.vim'
 
 Plug 'python-mode/python-mode'
+
+Plug 'sjl/gundo.vim'
 call plug#end()
 filetype plugin indent on
 
