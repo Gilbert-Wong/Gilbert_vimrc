@@ -46,6 +46,8 @@ noremap <silent><leader>9 :tabn 9<cr>
 noremap <silent><leader>0 :tabn 10<cr>
 noremap <silent><s-tab> :tabnext<CR>
 inoremap <silent><s-tab> <ESC>:tabnext<CR>
+"调用undotree
+nnoremap <Leader>ud :UndotreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 
 "让配置变更立即生效
@@ -162,7 +164,7 @@ Plug 'kien/ctrlp.vim'
 
 Plug 'python-mode/python-mode'
 
-Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
 call plug#end()
 filetype plugin indent on
 
