@@ -1,4 +1,70 @@
-"vim-plug插件目录
+"侦测文件类型
+filetype on
+"载入文件类型插件
+filetype plugin on
+
+"快捷键"""""""""""""""""""""""""""""""""""""""""""""""
+"定义快捷键的前缀，即<Leader>
+let mapleader=";"
+nmap LB 0
+nmap LE $
+
+"设置快捷键将选中文本块复制至系统剪贴板
+vnoremap <Leader>y "+y
+"设置快捷键将选中文本快复制至系统剪贴板
+nmap <Leader>pp "+p
+"定义快捷键关闭当前分割窗口
+nmap <Leader>q :q<CR>
+"定义快捷键保存所有窗口内容
+nmap <Leader>w :w<CR>
+"定义快捷键保存所有窗口内容并退出vim
+nmap <Leader>WQ :wa<CR>:q<CR>
+"不做任何保存，直接退出vim
+nmap <Leader>Q :qa!<CR>
+"定义快捷键在结对符之间跳转
+nmap <Leader>M %
+"定义Buffer切换键
+nmap <Leader>bn :bn<CR>
+nmap <Leader>bp :bp<CR>
+nmap <Leader>d :bdelete<CR>
+"定义tab快捷切换
+"noremap <silent><tab>m :tabnew<cr>
+"noremap <silent><tab>e :tabclose<cr>
+"noremap <silent><tab>n :tabn<cr>
+"noremap <silent><tab>p :tabp<cr>
+noremap <silent><leader>t :tabnew<cr>
+noremap <silent><leader>g :tabclose<cr>
+noremap <silent><leader>1 :tabn 1<cr>
+noremap <silent><leader>2 :tabn 2<cr>
+noremap <silent><leader>3 :tabn 3<cr>
+noremap <silent><leader>4 :tabn 4<cr>
+noremap <silent><leader>5 :tabn 5<cr>
+noremap <silent><leader>6 :tabn 6<cr>
+noremap <silent><leader>7 :tabn 7<cr>
+noremap <silent><leader>8 :tabn 8<cr>
+noremap <silent><leader>9 :tabn 9<cr>
+noremap <silent><leader>0 :tabn 10<cr>
+noremap <silent><s-tab> :tabnext<CR>
+inoremap <silent><s-tab> <ESC>:tabnext<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"开启实时搜索功能
+set incsearch
+
+"搜索忽略大小写
+set ignorecase
+
+"关闭兼容模式
+set nocompatible
+
+"vim 自身命令行模式智能补全
+set wildmenu
+
+"vim-plug环境设置
+filetype off
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
@@ -96,68 +162,14 @@ Plug 'kien/ctrlp.vim'
 
 Plug 'python-mode/python-mode'
 call plug#end()
+filetype plugin indent on
 
-"关闭兼容模式
-set nocompatible
-"让配置变更立即生效
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
-
-"快捷键"""""""""""""""""""""""""""""""""""""""""""""""
-"定义快捷键的前缀，即<Leader>
-let mapleader=";"
-nmap LB 0
-nmap LE $
-
-"设置快捷键将选中文本块复制至系统剪贴板
-vnoremap <Leader>y "+y
-"设置快捷键将选中文本快复制至系统剪贴板
-nmap <Leader>pp "+p
-"定义快捷键关闭当前分割窗口
-nmap <Leader>q :q<CR>
-"定义快捷键保存所有窗口内容
-nmap <Leader>w :w<CR>
-"定义快捷键保存所有窗口内容并退出vim
-nmap <Leader>WQ :wa<CR>:q<CR>
-"不做任何保存，直接退出vim
-nmap <Leader>Q :qa!<CR>
-"定义快捷键在结对符之间跳转
-nmap <Leader>M %
-"定义Buffer切换键
-nmap <Leader>bn :bn<CR>
-nmap <Leader>bp :bp<CR>
-nmap <Leader>d :bdelete<CR>
-"定义tab快捷切换
-"noremap <silent><tab>m :tabnew<cr>
-"noremap <silent><tab>e :tabclose<cr>
-"noremap <silent><tab>n :tabn<cr>
-"noremap <silent><tab>p :tabp<cr>
-noremap <silent><leader>t :tabnew<cr>
-noremap <silent><leader>g :tabclose<cr>
-noremap <silent><leader>1 :tabn 1<cr>
-noremap <silent><leader>2 :tabn 2<cr>
-noremap <silent><leader>3 :tabn 3<cr>
-noremap <silent><leader>4 :tabn 4<cr>
-noremap <silent><leader>5 :tabn 5<cr>
-noremap <silent><leader>6 :tabn 6<cr>
-noremap <silent><leader>7 :tabn 7<cr>
-noremap <silent><leader>8 :tabn 8<cr>
-noremap <silent><leader>9 :tabn 9<cr>
-noremap <silent><leader>0 :tabn 10<cr>
-noremap <silent><s-tab> :tabnext<CR>
-inoremap <silent><s-tab> <ESC>:tabnext<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"开启实时搜索功能
-set incsearch
-"搜索忽略大小写
-set ignorecase
-"vim 自身命令行模式智能补全
-set wildmenu
 
 """""""""""'外观设定"""""""""""""""""""""'
 "配色方案
 syntax enable
+"语法高亮
+syntax on
 if has('gui_running')
     set background=light
     "set background=dark
@@ -253,14 +265,8 @@ set cmdheight=1
 "自适应不同语言的智能缩进
 filetype indent on
 
-"载入文件类型插件
-filetype plugin on
 
-"侦测文件类型
-filetype on
 
-"语法高亮
-set syntax=on
 
 "可以在buffer的任何地方使用鼠标
 set mouse=a
