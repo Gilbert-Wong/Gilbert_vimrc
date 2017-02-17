@@ -165,6 +165,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'python-mode/python-mode'
 
 Plug 'mbbill/undotree'
+
+Plug 'google/yapf'
 call plug#end()
 filetype plugin indent on
 

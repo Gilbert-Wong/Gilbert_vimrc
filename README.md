@@ -1,4 +1,4 @@
-#### Config steps
+#### Usage
 
 ```
 git clone https://github.com/Gilbert-Wong/my-vimconfig.git
