@@ -49,6 +49,8 @@ inoremap <silent><s-tab> <ESC>:tabnext<CR>
 "调用undotree
 nnoremap <Leader>ud :UndotreeToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""
+"yapf 格式化
+autocmd FileType python nnoremap <LocalLeader>= :0$!yapf<CR>
 
 "让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
