@@ -476,7 +476,7 @@ let g:vimmake_mode['g++'] = 'async'
 let g:vimmake_mode['run'] = 'normal'
 noremap <silent><F10> :call vimmake#toggle_quickfix(6)<CR>
 noremap <F6> :VimTool runnewwindow<CR>
-noremap <F10><F7> :VimTool g++<CR>
+noremap <F7> :VimTool g++<CR>
 noremap <F5> :VimTool run<CR>
 inoremap <F7> <ESC>:VimTool g++<CR> 
 inoremap <F5> <ESC>:VimTool run<CR> 
