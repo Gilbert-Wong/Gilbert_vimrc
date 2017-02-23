@@ -12,7 +12,7 @@ nmap LE $
 "设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
 "设置快捷键将选中文本快复制至系统剪贴板
-nmap <Leader>pp "+p
+nmap <Leader>pp "+gP
 "定义快捷键关闭当前分割窗口
 nmap <Leader>q :q<CR>
 "定义快捷键保存所有窗口内容
