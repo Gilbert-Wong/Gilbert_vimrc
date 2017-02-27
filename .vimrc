@@ -148,8 +148,6 @@ Plug 'lilydjwg/fcitx.vim'
 "快速开关注释
 Plug 'scrooloose/nerdcommenter'
 
-"ctrl space
-Plug 'vim-ctrlspace/vim-ctrlspace'
 
 "括号匹配
 Plug 'Raimondi/delimitMate'
@@ -326,18 +324,15 @@ map <silent> <F11> :call ToggleFullscreen()<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-"ConqueueGDB settings
-map <Leader>r :run
-map <Leader>c :continue
-map <Leader>s :step
-map <Leader>pv :print variable under cursor
+"The default ConqueueGDB settings
+"map <Leader>r :run
+"map <Leader>c :continue
+"map <Leader>s :step
+"map <Leader>p :print variable under cursor
 let g:ConqueTerm_Color = 2         " 1: strip color after 200 lines, 2: always with color
 let g:ConqueTerm_CloseOnEnd = 1    " close conque when program ends running
 let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly
 
-"ctrlspace settings
-set hidden
-map <Leader><space> <C-Space>
 "inoremap <Leader>c <C-Space>
 
 "Indent Guides Plug configuration
