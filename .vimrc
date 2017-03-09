@@ -142,8 +142,8 @@ Plug 'vim-scripts/DrawIt'
 "Plug 'gilligan/vim-lldb'
 Plug 'vim-scripts/Conque-GDB'
 
-"vim fcitx
-Plug 'lilydjwg/fcitx.vim'
+""vim fcitx
+"Plug 'lilydjwg/fcitx.vim'
 
 "快速开关注释
 Plug 'scrooloose/nerdcommenter'
@@ -161,8 +161,6 @@ Plug 'vim-scripts/Conque-Shell'
 Plug 'skywind3000/vimmake'
 
 Plug 'kien/ctrlp.vim'
-
-Plug 'python-mode/python-mode'
 
 Plug 'mbbill/undotree'
 
@@ -458,7 +456,7 @@ let g:syntastic_cpp_compiler='g++'
 let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libc++'
 
 "pythonmode
-let g:pymode_python = 'python3'
+"let g:pymode_python = 'python3'
 
 
 
