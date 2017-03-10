@@ -143,7 +143,7 @@ Plug 'vim-scripts/DrawIt'
 Plug 'vim-scripts/Conque-GDB'
 
 ""vim fcitx
-"Plug 'lilydjwg/fcitx.vim'
+Plug 'lilydjwg/fcitx.vim'
 
 "快速开关注释
 Plug 'scrooloose/nerdcommenter'
