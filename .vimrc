@@ -187,6 +187,9 @@ endif
 set laststatus=2
 set linespace=0
 let g:airline_powerline_fonts=1
+"if !exists('g:airline_symbols')
+    "let g:airline_symbols={}
+"endif
 "let g:airline_section_b = '%{strftime("%c")}'
 "let g:airline_section_y = 'BN: %{bufnr("%")}'
 let g:airline_theme='light'
@@ -196,7 +199,7 @@ let g:airline_theme='light'
 
 " 设置 gvim 显示字体
 "set guifont=YaHei\ Consolas\ Hybrid\ 11.5
-set guifont=Source\ Code\ Pro\ Regular\ 13
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 13
 "设置字符编码
 set encoding=utf8
 set langmenu=zh_CN.utf-8
