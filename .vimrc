@@ -5,7 +5,7 @@ filetype plugin on
 
 "快捷键"""""""""""""""""""""""""""""""""""""""""""""""
 "定义快捷键的前缀，即<Leader>
-let mapleader=";"
+let mapleader="\<space>"
 nmap LB 0
 nmap LE $
 
