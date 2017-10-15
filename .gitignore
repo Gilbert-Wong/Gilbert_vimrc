@@ -2,3 +2,4 @@ plugged/*
 .netrwhist
 npm-debug.log
 ..vimrc.un~
+/.vs

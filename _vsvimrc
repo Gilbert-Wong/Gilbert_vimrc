@@ -1,0 +1,38 @@
+let mapleader="\<space>"
+
+vnoremap <Leader>y "+y
+
+nmap <Leader>pp "+gP
+
+nmap <Leader>q :q<CR>
+
+nmap <Leader>w :w<CR>
+
+nmap <Leader>WQ :wa<CR>:q<CR>
+
+nmap <Leader>Q :qa!<CR>
+
+" open instant search mode
+set hlsearch
+set incsearch
+
+" search ignore case
+set ignorecase
+
+set wildmenu
+
+set autoindent
+
+set cindent
+
+set tabstop=4
+
+set softtabstop=4
+
+set shiftwidth=4
+
+set expandtab
+
+set smarttab
+
+set cmdheight=1
